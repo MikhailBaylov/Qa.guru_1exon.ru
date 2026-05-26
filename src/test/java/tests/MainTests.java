@@ -20,7 +20,7 @@ public class MainTests extends TestBase {
 
     @CsvFileSource(resources = "/testdata/Modules.csv")
     @ParameterizedTest(name = "Проверка страницы модуля {0}, его адреса {1} и описания {2}")
-    void checkingModulesWithCsvFileSource(String moduleName, String moduleUrl, String moduleText) {
+    void checkingModules(String moduleName, String moduleUrl, String moduleText) {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         step("Открываем главную страницу", () -> open(baseUrl));
